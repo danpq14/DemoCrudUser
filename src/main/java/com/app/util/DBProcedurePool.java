@@ -33,5 +33,6 @@ public class DBProcedurePool {
     public static final String GET_USER_BY_PHONE = "{call PKG_D_USER.user_get_by_phone(?,?,?,?)}";
     public static final String INSERT_USER = "{call PKG_D_USER.insert_user(?,?,?,?,?,?,?,?)}";
     public static final String UPDATE_USER = "{call PKG_D_USER.update_user(?,?,?,?,?,?,?,?,?)}";
+    public static final String DELETE_USER = "{call PKG_D_USER.delete_user(?,?,?)}";
 
 }

@@ -205,6 +205,33 @@ public class NewUserService implements LoggerInterface {
 		return resultMap;
 	}
 	
+	public static Map deleteUser(String id) throws SQLException {
+		logger.log(Level.INFO, "Delete User");
+		Map user = getUserById(id);
+		
+		Map inputParams = new LinkedHashMap<>();
+		inputParams.put(1, id);
+		
+		Map outputParamsName = new LinkedHashMap<>();
+		outputParamsName.put(2, AppParams.RESULT_CODE);
+		outputParamsName.put(3, AppParams.RESULT_MSG);
+		
+		Map outputParamsType = new LinkedHashMap<>();
+		outputParamsType.put(2, OracleTypes.NUMBER);
+		outputParamsType.put(3, OracleTypes.VARCHAR);
+		
+		Map insertResultMap = DBProcedureUtil.execute(dataSource, DBProcedurePool.DELETE_USER, inputParams, outputParamsType, outputParamsName);
+		
+		int resultCode = ParamUtil.getInt(insertResultMap, AppParams.RESULT_CODE);
+
+		if (resultCode != HttpResponseStatus.OK.code()) {
+			throw new OracleSQLException();
+		}
+		Map resultMap = new LinkedHashMap<>();
+		resultMap.put("User was deleted", user);
+		return resultMap;
+	}
+	
 	private static Map format(Map dataList) {
 		Map resultMap = new LinkedHashMap<>();
 		resultMap.put(AppParams.ID, ParamUtil.getString(dataList, AppParams.S_ID));

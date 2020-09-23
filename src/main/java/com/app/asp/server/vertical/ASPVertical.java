@@ -4,6 +4,7 @@ import java.util.logging.Level;
 
 import com.app.asp.server.handler.common.RequestLoggingHandler;
 import com.app.asp.server.handler.common.ResponseHandler;
+import com.app.asp.server.handler.user.DeleteUserByIdHandler;
 import com.app.asp.server.handler.user.InsertUserHandler;
 import com.app.asp.server.handler.user.SearchUserByIdHandler;
 import com.app.asp.server.handler.user.SearchUserByPhoneHandler;
@@ -101,10 +102,21 @@ public class ASPVertical extends AbstractVerticle implements LoggerInterface {
     
     private Router subRouter() {
     	Router router = Router.router(vertx);
+    	
+    	//Search User By ID
     	router.route(HttpMethod.GET, "/user/:id").handler(new SearchUserByIdHandler());
+    	
+    	//Seach User By Phone Number
     	router.route(HttpMethod.GET, "/phone/:phone").handler(new SearchUserByPhoneHandler());
+    	
+    	//Create New User
     	router.route(HttpMethod.POST, "/user").handler(new InsertUserHandler());
+    	
+    	//Update Existing User
     	router.route(HttpMethod.PUT, "/user").handler(new UpdateUserHandler());
+    	
+    	//Delete User By Id
+    	router.route(HttpMethod.DELETE, "/user/:id").handler(new DeleteUserByIdHandler());
     	return router;
     }
 
