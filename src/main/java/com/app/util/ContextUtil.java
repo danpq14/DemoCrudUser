@@ -8,9 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by HungDX on 24-Nov-15.
- */
+
 public class ContextUtil {
 
     public static boolean getBoolean(RoutingContext routingContext, String paramName) {

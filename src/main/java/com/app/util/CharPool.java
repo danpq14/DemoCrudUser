@@ -1,8 +1,6 @@
 package com.app.util;
 
-/**
- * Created by HungDX on 12/22/2014.
- */
+
 public class CharPool {
 
 	public static final char COMMA = ',';

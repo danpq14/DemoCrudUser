@@ -1,8 +1,5 @@
 package com.app.util;
 
-/**
- * Created by HungDX on 12/3/2014.
- */
 public class StringPool {
 
     public static final String BLANK = "";

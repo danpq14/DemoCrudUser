@@ -1,8 +1,5 @@
 package com.app.util;
 
-/**
- * Created by Hung on 8/5/2015.
- */
 public class AppParams {
 
     /**

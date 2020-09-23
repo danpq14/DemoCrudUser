@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.app.asp.server.vertical;
 
 import java.util.logging.Level;
@@ -27,10 +22,6 @@ import io.vertx.rxjava.ext.web.handler.BodyHandler;
 import io.vertx.rxjava.ext.web.handler.ResponseTimeHandler;
 import io.vertx.rxjava.ext.web.handler.TimeoutHandler;
 
-/**
- *
- * @author hungdt
- */
 public class ASPVertical extends AbstractVerticle implements LoggerInterface {
 
     private String serverHost;
@@ -84,7 +75,7 @@ public class ASPVertical extends AbstractVerticle implements LoggerInterface {
         router.route().handler(new RequestLoggingHandler());
 
 //        router.mountSubRouter(apiPrefix, demoCRUD());
-        router.mountSubRouter("/api/dan", newRouter());
+        router.mountSubRouter("/api/dan", subRouter());
         router.route().last().handler(new ResponseHandler());
 
         HttpServerOptions httpServerOptions = new HttpServerOptions();
@@ -108,7 +99,7 @@ public class ASPVertical extends AbstractVerticle implements LoggerInterface {
 
 
     
-    private Router newRouter() {
+    private Router subRouter() {
     	Router router = Router.router(vertx);
     	router.route(HttpMethod.GET, "/user/:id").handler(new SearchUserByIdHandler());
     	router.route(HttpMethod.GET, "/phone/:phone").handler(new SearchUserByPhoneHandler());

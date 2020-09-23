@@ -4,9 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.Random;
 import java.util.logging.Logger;
 
-/**
- * Created by HungDX on 27-Jan-16.
- */
 public class AppUtil {
 
     public static String generateRandomNumber(int length) {
@@ -46,7 +43,6 @@ public class AppUtil {
             c = s.charAt(i);
             if ((pos = UNICODE.indexOf(c)) != -1) {
                 result += NOSIGN[pos];
-                //System.out.println("pos=" + pos + ", c=" + c);
             } else {
                 result += c;
             }

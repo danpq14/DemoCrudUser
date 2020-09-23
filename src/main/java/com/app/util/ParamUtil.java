@@ -5,9 +5,7 @@ import io.vertx.core.json.JsonObject;
 import java.text.DateFormat;
 import java.util.*;
 
-/**
- * Created by HungDX on 24-Nov-15.
- */
+
 public class ParamUtil {
 
     public static boolean getBoolean(Map paramMap, String paramName) {

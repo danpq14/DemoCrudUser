@@ -1,8 +1,6 @@
 package com.app.util;
 
-/**
- * Created by HungDX on 1/28/2015.
- */
+
 public class DBProcedurePool {
 
     public static final String CLIENT_GET = "{call PKG_CLIENT.client_get(?,?,?,?)}";

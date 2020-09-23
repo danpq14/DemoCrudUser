@@ -10,9 +10,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by HungDX on 29/10/2015
- */
 public class DBProcedureUtil {
 
     public static Map execute(DataSource dataSource, String procedureCallStr, Map<Integer, Object> inputParams,

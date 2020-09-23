@@ -13,9 +13,7 @@ import io.vertx.core.http.HttpMethod;
 import io.vertx.rxjava.core.http.HttpServerRequest;
 import io.vertx.rxjava.ext.web.RoutingContext;
 
-/**
- * Created by HungDX on 23-Apr-16.
- */
+
 public class RequestLoggingHandler implements Handler<RoutingContext>, LoggerInterface {
 
     @Override
@@ -38,7 +36,7 @@ public class RequestLoggingHandler implements Handler<RoutingContext>, LoggerInt
                 }
                 String userId = routingContext.getCookie(AppParams.USER_ID) != null ? routingContext.getCookie(AppParams.USER_ID).getValue() : StringPool.BLANK;
                 routingContext.put(AppParams.USER_ID, userId);
-                // TODO: FAKE DATA TYPE
+
                 routingContext.put(AppParams.USER_ID, userId);
                 if (userId != null && !userId.isEmpty()) {
                     validateUser(userId);

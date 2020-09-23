@@ -3,9 +3,6 @@ package com.app.util;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by HungDX on 23-Apr-16.
- */
 public class StringUtil {
 
     public static String[] split(String s, char delimiter) {

@@ -1,10 +1,6 @@
 package com.app.util;
 
-//import com.app.http.Youtube;
-//import com.app.services.DetectHandset;
-//import com.app.services.LoggerInterface;
 import java.io.*;
-import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Date;

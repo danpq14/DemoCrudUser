@@ -63,11 +63,6 @@
 		<property name="vertxVertical" ref="aspVertical" />
 	</bean>
 
-	<!-- <bean id="usersHandler" class="com.app.asp.server.handler.UsersHandler">
-		<property name="expire" value="${service.authorization.expire}" />
-	</bean> -->
-
-
 	<bean id="newUserService" class="com.app.asp.service.NewUserService">
 		<property name="dataSource" ref="aspDataSource" />
 	</bean>

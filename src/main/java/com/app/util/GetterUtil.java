@@ -5,9 +5,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Created by HungDX on 12/25/2014
- */
+
 public class GetterUtil {
 
     public static String[] BOOLEANS = {"true", "t", "y", "on", "1"};

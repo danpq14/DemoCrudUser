@@ -18,9 +18,6 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.rxjava.core.http.HttpServerResponse;
 import io.vertx.rxjava.ext.web.RoutingContext;
 
-/**
- * Created by HungDX on 23-Apr-16.
- */
 public class ResponseHandler implements Handler<RoutingContext>, LoggerInterface {
 
 	@Override

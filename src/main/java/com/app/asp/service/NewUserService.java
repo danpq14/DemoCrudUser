@@ -204,6 +204,7 @@ public class NewUserService implements LoggerInterface {
 		
 		return resultMap;
 	}
+	
 	private static Map format(Map dataList) {
 		Map resultMap = new LinkedHashMap<>();
 		resultMap.put(AppParams.ID, ParamUtil.getString(dataList, AppParams.S_ID));

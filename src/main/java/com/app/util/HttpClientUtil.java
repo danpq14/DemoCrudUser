@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.app.util;
 
-//import asia.leadsgen.security.wss.Authorization;
 import com.app.asp.server.vertical.ASPVertical;
 import io.vertx.core.http.HttpHeaders;
 import io.vertx.core.http.HttpMethod;
@@ -20,10 +14,7 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.logging.Level;
 
-/**
- *
- * @author hungdt
- */
+
 public class HttpClientUtil implements LoggerInterface {
 
     public static HttpClientRequest createHttpRequest(HttpServiceConfig httpServiceConfig, String requestURI, HttpMethod requestMethod, Map queryParametersMap, String requestBody) {
